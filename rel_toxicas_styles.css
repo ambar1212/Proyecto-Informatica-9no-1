@@ -1,0 +1,37 @@
+
+        /* Estilos para centrar el contenido y dar formato a la página */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 60%;
+            text-align: center;
+        }
+
+        /* Estilo de la imagen */
+        .image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Estilos para el título y el párrafo */
+        h1 {
+            color: #007BFF;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-top: 15px;
+        }
+   

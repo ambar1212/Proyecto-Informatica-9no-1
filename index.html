@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Botones y Animación de Corazones</title>
+    <!-- Enlazamos el archivo CSS externo -->
+    <link rel="stylesheet" href="index_styles.css">
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+
+        // Función para generar corazones
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerText = '❤️';
+
+            // Posiciona el corazón en un lugar aleatorio a lo largo del ancho de la ventana
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's'; // Duración aleatoria entre 3 y 5 segundos
+
+            document.body.appendChild(heart);
+
+            // Elimina el corazón después de que termina la animación
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        // Genera un nuevo corazón cada 800 ms
+        setInterval(createHeart, 800);
+    </script>
+</head>
+<body>
+    <!-- Contenedor principal para la página -->
+    <div class="container">
+        <!-- Contenedor para el título y párrafo -->
+        <div class="header-container">
+            <h1>Relaciones de pareja</h1>
+            <p> </p>
+            <p>Las relaciones de pareja constituyen un elemento fundamental en el ciclo vital de las personas y es por ello que se han desarrollado numerosos estudios e investigaciones centrados en la búsqueda de aquellos factores     capaces de influir en el desarrollo de este tipo de unión.</p>
+             <p> </p>
+ <p>Podemos encontrar diferentes tipos de relaciones de parejas:</p>
+        </div>
+
+        <!-- Contenedor para los botones y la imagen -->
+        <div class="button-container">
+            <button class="button" onclick="goToPage('pagina_relaciones_saludable.html')">Relaciones Saludables</button>
+            <button class="button" onclick="goToPage('pagina_relaciones_toxicas.html')">Relaciones Tóxicas</button>
+            <button class="button" onclick="goToPage('pagina_relaciones_abiertas.html')">Relaciones Abiertas</button>
+        </div>
+
+        <!-- Contenedor para la imagen -->
+        <div class="image-container">
+            <img src="HumanRelated.jpg" alt="Imagen de Relaciones Humanas">
+        </div>
+    </div>
+</body>
+</html>
+
